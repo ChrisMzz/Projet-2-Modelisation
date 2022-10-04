@@ -8,7 +8,7 @@ Ce projet a pour but d'étudier le côté mathématique des [courbes de Bézier]
 et ainsi dessiner des figures, notamment des lettres. 
 
 ### Le rapport
-Un rapport tex sera écrit pour contenir toute l'étude, résultats mathématiques inclus.
+Un rapport tex sera écrit pour contenir toute l'étude, résultats mathématiques inclus (il faudra mettre un lien vers le Overleaf ici).
 
 ### Le code
 Les fichiers utilisés pour mettre en application notre étude seront tous regroupés dans la section du code. 
