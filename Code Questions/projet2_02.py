@@ -1,9 +1,7 @@
 #%%
 from projet2_01 import*
-import numpy as np
 from  math import*
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FormatStrFormatter
 #from matplotlib.animation import FuncAnimation
 
 
@@ -24,6 +22,9 @@ fig, ax = plt.subplots()
 N = 40
 
 def move(N):
+    global cn1
+    global c8
+    global cn2
     for k in range(N):
         c8[0] += 0.2/(N)
         c8[1] -= 1/(N)
@@ -56,6 +57,9 @@ def swap(i):
     ax.plot(extract(cn,0), extract(cn,1), "-x", color="b")
     ax.plot(extract(cs,0), extract(cs,1), "-x", color="r")
     fig.savefig(f"images-02/swap/c{i}c{i+1}_échangés.png", dpi=300, format="png")
+
+
+
 
 for i in range(15):
     swap(i)

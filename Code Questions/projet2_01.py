@@ -72,10 +72,10 @@ def bezier(cn, tn):
     Args:
         cn (list): liste de taille n de tuples c correspondant aux points de contrôle.
         tn (list): liste de taille n de nombres correspondant à la segmentation de [0,1].
-            Utiliser la fonction segment(cn) pour optimiser.
+            Utiliser la fonction segment(cn) ou segment(n) pour optimiser.
 
     Returns:
-        _type_: numpy.ndarray
+        numpy.ndarray: tableau des points de la courbe de Bézier
     """
     n = len(cn)-1
     tempg = []
@@ -110,8 +110,7 @@ cn += [(2,1), (3,1), (3,1), (3,1.5)]
 cn = [(np.random.randint(0,10),np.random.randint(0,10)) for i in range(11) for j in range(11)]
 
 
-x = extract(bezier(cn,segment(1000)), 0)
-y = extract(bezier(cn,segment(1000)), 1)
+x, y = extract(bezier(cn,segment(1000)), 0), extract(bezier(cn,segment(1000)), 1)
 
 fig, ax = plt.subplots()
 ax.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
@@ -120,7 +119,7 @@ fig.set_figwidth(5)
 
 ax.plot(extract(cn,0), extract(cn,1), "b-x")
 ax.plot(x,y, color=(0.8,0,1))
-fig.savefig("images-01/autre.png", dpi=300, format="png")
+#fig.savefig("images-01/autre.png", dpi=300, format="png")
 
 
 
