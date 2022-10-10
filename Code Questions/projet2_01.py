@@ -45,9 +45,11 @@ def B(n, k, t):
 # donne la même chose que binomial(4,3)*(0.7)^3*(1-0.7)^(4-3) sur wolframalpha.com
 
 
+
 def segment(n):
     return [i/n for i in range(n+1)]
 
+# Au cas où on décide de passer une liste de points de contrôle en paramètres
 def segmentc(cn):
     return segment(len(cn))
 
@@ -107,7 +109,7 @@ cn += [(2,1), (3,1), (3,1), (3,1.5)]
 
 # Pour faire autre chose : 
 #cn =
-cn = [(np.random.randint(0,10),np.random.randint(0,10)) for i in range(11) for j in range(11)]
+#cn = [(np.random.randint(0,10),np.random.randint(0,10)) for i in range(11) for j in range(11)]
 
 
 x, y = extract(bezier(cn,segment(1000)), 0), extract(bezier(cn,segment(1000)), 1)
@@ -117,8 +119,8 @@ ax.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
 fig.set_figheight(4)
 fig.set_figwidth(5)
 
-ax.plot(extract(cn,0), extract(cn,1), "b-x")
-ax.plot(x,y, color=(0.8,0,1))
+#ax.plot(extract(cn,0), extract(cn,1), "b-x")
+#ax.plot(x,y, color=(0.8,0,1))
 #fig.savefig("images-01/autre.png", dpi=300, format="png")
 
 
