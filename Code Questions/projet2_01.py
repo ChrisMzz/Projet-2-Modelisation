@@ -34,7 +34,8 @@ class Point:
         for pos in (self.x,self.y):
             yield pos
 
-
+    def __hash__(self): # au cas où on recrée une fonction récursive qui retourne un Point
+        return hash((self.x, self.y))
 
 
 
@@ -111,8 +112,8 @@ cn += [(2,1), (3,1), (3,1), (3,1.5)]
 #cn =
 #cn = [(np.random.randint(0,10),np.random.randint(0,10)) for i in range(11) for j in range(11)]
 
-
-x, y = extract(bezier(cn,segment(1000)), 0), extract(bezier(cn,segment(1000)), 1)
+bez = bezier(cn,segment(1000))
+x, y = extract(bez, 0), extract(bez, 1)
 
 fig, ax = plt.subplots()
 ax.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))

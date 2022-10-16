@@ -1,4 +1,6 @@
 #%%
+from functools import lru_cache
+import time
 from projet2_01 import*
 from  math import*
 import matplotlib.pyplot as plt
@@ -18,11 +20,13 @@ cn += [(2,1), (3,1), (3,1), (3,1.5)]
 
 # Méthode de De Casteljau
 
+@lru_cache
 def c(cn, i, m, t):
     """c_i^m(t) : Calcule le point entre cn[i] et cn[i+1] en fonction de t
 
     Args:
-        cn (list): liste des tuples correspondant aux points de contrôle
+        cn (tuple): tuple des tuples correspondant aux points de contrôle
+        cn doit être un tuple pour faire fonctionner lru_cache
         i (int)
         m (int)
         t (float)
@@ -33,10 +37,10 @@ def c(cn, i, m, t):
     if m == 1:
         return (1-t)*Point(cn[i]) + t*Point(cn[i+1])
     else:
-        return tuple((1-t)*c(cn, i, m-1, t) + t*c(cn, i+1, m-1, t))
+        return (1-t)*c(cn, i, m-1, t) + t*c(cn, i+1, m-1, t)
     
 def delta(cn, n, t):
-    return c(cn, 0, n, t)
+    return tuple(c(tuple(cn), 0, n, t))
 
 def casteljau(cn, tn):
     """casteljau(cn,tn) -> np.array contenant des 2-tuples correspondants aux points pour un temps t de la courbe de Bézier
@@ -66,14 +70,22 @@ def casteljau(cn, tn):
 
 
 # On réutilisera les mêmes fonctions pour discrétiser un segment de [0,1] et tracer les courbes
-tn = segment(60)
+tn = segment(1000)
 
 
 # Méthode de Casteljau
-x,y = extract(casteljau(cn, tn),0), extract(casteljau(cn, tn),1)
+
+start_time = time.time() # Pour comparer avec et sans lru_cache
+
+castel = casteljau(cn, tn) # Pour ne pas faire tourner la fonction deux fois
+x,y = extract(castel,0), extract(castel,1)
+
+print(f"--- {(time.time() - start_time)} secondes ---")
+
 
 # Méthode avec polynôme de Bernstein
-#x, y = extract(bezier(cn,tn), 0), extract(bezier(cn,tn), 1)
+#bez = bezier(cn,tn)
+#x, y = extract(bez, 0), extract(bez, 1)
 
 
 
