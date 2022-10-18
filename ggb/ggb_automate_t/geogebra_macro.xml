@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.736.0" app="classic" platform="d"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="Automate_t" toolName="Automate_t" toolHelp="Automate_t[ &lt;Point&gt;, &lt;Point&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true">
+<macroInput a0="A" a1="B"/>
+<macroOutput a0="r"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="6.0" y="9.0" z="1.0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="4.0" y="8.0" z="1.0"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="B"/>
+	<output a0="f"/>
+</command>
+<element type="segment" label="f">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="1.0" y="-2.0" z="12.0"/>
+</element>
+<command name="Point">
+	<input a0="f"/>
+	<output a0="J"/>
+</command>
+<element type="point" label="J">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="204" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="5.523795421938317" y="8.761897710969158" z="1.0"/>
+</element>
+<expression label="r" exp="Length[J - A] / Length[B - A]" />
+<element type="numeric" label="r">
+	<value val="0.23810228903084152"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+</construction>
+</macro>
+</geogebra>

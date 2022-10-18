@@ -96,7 +96,7 @@ fig.set_figwidth(5)
 
 ax.plot(x,y, color=(0.8,0,1))
 
-fig.savefig("images-07/casteljau.png", dpi=300, format="png")
+#fig.savefig("images-07/casteljau.png", dpi=300, format="png")
 
 
 

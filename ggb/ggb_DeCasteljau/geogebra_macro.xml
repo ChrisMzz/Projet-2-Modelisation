@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.736.0" app="classic" platform="d"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="DeCasteljau" toolName="De Casteljau" toolHelp="DeCasteljau[ &lt;Point&gt;, &lt;Point&gt;, &lt;Number&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true">
+<macroInput a0="V_1" a1="W_1" a2="r"/>
+<macroOutput a0="H_2"/>
+<construction title="" author="" date="">
+<element type="numeric" label="r">
+	<value val="0.4218932271834522"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="point" label="V_1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<caption val="B&apos;"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="5.0" y="9.0" z="1.0"/>
+</element>
+<element type="point" label="W_1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<caption val="C&apos;"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="4.0" y="8.5" z="1.0"/>
+</element>
+<expression label="H_2" exp="(r * Vector[W_1 - V_1]) + V_1" type="point" />
+<element type="point" label="H_2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="204" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<coords x="4.578106772816548" y="8.789053386408273" z="1.0"/>
+</element>
+</construction>
+</macro>
+</geogebra>

@@ -26,6 +26,9 @@ class Point:
 
     def __rmul__(self, other):
         return Point((self.x*other, self.y*other))
+    
+    def __neg__(self):
+        return Point(-self.x,-self.y)
         
     def __str__(self):
         return f'({self.x}, {self.y})'

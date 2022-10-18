@@ -33,7 +33,7 @@ ax.plot(extract(cn,0), extract(cn,1), "b-x")
 ax.plot(x,y, color=(0.8,0,1))
 
 
-fig.savefig("images-08/alpha_arrondi_02.png",dpi=300, format="png")
+#fig.savefig("images-08/alpha_arrondi_02.png",dpi=300, format="png")
 
 
 

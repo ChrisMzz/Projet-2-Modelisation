@@ -60,7 +60,7 @@ def move(N):
     y = extract(bezier(cn,segment(1000)), 1)
     ax.plot(x,y, color="red")
     ax.plot(extract(cn,0), extract(cn,1), color="red")
-    fig.savefig("images-02/c8_modifié.png", dpi=300, format="png")
+    #fig.savefig("images-02/c8_modifié.png", dpi=300, format="png")
 
 def swap(i):
     plt.clf()
@@ -77,7 +77,7 @@ def swap(i):
     ax.plot(x,y, color=(0.4,0.2,1))
     ax.plot(extract(cn,0), extract(cn,1), "-x", color="b")
     ax.plot(extract(cs,0), extract(cs,1), "-x", color="r")
-    fig.savefig(f"images-02/swap/c{i}c{i+1}_échangés.png", dpi=300, format="png")
+    #fig.savefig(f"images-02/swap/c{i}c{i+1}_échangés.png", dpi=300, format="png")
 
 
 move(30)
