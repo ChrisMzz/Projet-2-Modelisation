@@ -95,7 +95,7 @@ Des constructions interactives par méthode de De Casteljau de ces lettres sont 
  - [Construction du caractère ξ](https://www.geogebra.org/m/xpeuyn6q)
  
 
-![](https://github.com/ChrisMzz/Projet-2-Modelisation/tree/main/Code%20Questions/images-11/xi.gif)
+![](https://github.com/ChrisMzz/Projet-2-Modelisation/blob/main/Code%20Questions/images-11/xi.gif)
 
 Nous avions commencé à créer un outil d'animation de la méthode de De Casteljau sur n'importe quel polygone de contrôle en décompressant les fichiers GeoGebra `.ggb`, en les regroupant individuellement dans des dossiers dont les noms commençaient par `ggb_` et en exécutant le script suivant :
 
