@@ -68,6 +68,9 @@ def swap(i):
     cn = [(1,2), (2,2), (2,2), (3,2), (3,3), (3,3)]
     cn += [(2,3), (1,3), (1,3), (1,2), (1,1), (1,1)]
     cn += [(2,1), (3,1), (3,1), (3,1.5)]
+    x = extract(bezier(cn,segment(1000)), 0)
+    y = extract(bezier(cn,segment(1000)), 1) 
+    ax.plot(x,y, color=(0.8,0.8,0.8))
     temp = cn[i]
     cn[i] = cn[i+1]
     cn[i+1] = temp
@@ -80,7 +83,10 @@ def swap(i):
     #fig.savefig(f"images-02/swap/c{i}c{i+1}_échangés.png", dpi=300, format="png")
 
 
-move(30)
+#move(30)
+
+for i in range(len(cn)-1):
+    swap(i)
 
 
 

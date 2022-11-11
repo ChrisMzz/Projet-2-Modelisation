@@ -51,6 +51,10 @@ cn = [(3.8,10),(3,9.5),(3,8.5),(4.5,9),(4.5,10),(3.5,9),(4,8.5),(5,9),(6,9)]
 cn += [(4,8.5),(3,9),(3,3),(3,1),(7,7),(7,4),(7,3),(6,2.5)]
 
 
+# bezigon 3.2
+cn = [(1,2),(1.7,2),(2.3,2),(3,2),(3,2.7),(2.75,3),(2,3),(1.25,3),(1,2.7)]
+cn += [(1,2),(1,1.3),(1.3,1),(2,1),(2.7,1),(3,1.3),(3,1.5)]
+
 # -------------------------------------------------------------
 
 
@@ -62,8 +66,8 @@ axins2 = inset_axes(ax, width='10%', height='2%', loc='lower right', bbox_to_anc
 
 
 
-bezg = bezigon(9, cn, segment(1000))
-cn = bezigon(9, cn, segment(1000), True)
+bezg = bezigon(3, cn, segment(1000))
+cn = bezigon(3, cn, segment(1000), True)
 
 cmap_bezg = ListedColormap([[0.5+0.5*i/len(bezg),0,1-0.7*i/len(bezg),1] for i in range(len(bezg))])
 cmap_cn = ListedColormap([[0, 1-i/len(cn), 0,1] for i in range(len(cn))])
@@ -101,4 +105,4 @@ ax.plot(extract(nocn,0),extract(nocn,1),color=(1,0,0))
 """
 # -------------------------------------------------
 
-#fig.savefig("images-11/zeta.png", dpi=300, format="png")
+fig.savefig("images-11/fig32.png", dpi=300, format="png")
